@@ -4,23 +4,36 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const comment = {
+  date: new Date(),
+  text: 'I hope you enjoy learning React!',
+  author: {
+    name: 'Hello Kitty',
+    avatarUrl: 'https://images.indianexpress.com/2024/03/vacation.jpg?w=640'
+  }
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
+root.render(
+  <React.StrictMode>
+    <App 
+      date={comment.date}
+      text={comment.text}
+      author={comment.author}
+    />
+  </React.StrictMode>
+);
 
-function tick(props) {
-  const element = (
-    <div>
-      <h1>Hello, world!</h1>
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
-    </div>
-  );
-  root.render(element);}
+// function tick(props) {
+//   const element = (
+//     <div>
+//       <h1>Hello, world!</h1>
+//       <h2>It is {new Date().toLocaleTimeString()}.</h2>
+//     </div>
+//   );
+//   root.render(element);}
 
-setInterval(tick, 1000);
+// setInterval(tick, 1000);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
