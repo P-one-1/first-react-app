@@ -71,3 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Updating the Rendered Element
 For reference click here: [https://legacy.reactjs.org/docs/rendering-elements.html#updating-the-rendered-element]
+
+### Why do multiple JSX tags need to be wrapped?
+JSX looks like HTML, but under the hood it is transformed into plain JavaScript objects. You can’t return two objects from a function without wrapping them into an array. This explains why you also can’t return two JSX tags without wrapping them into another tag or a Fragment.
+For reference click here: [https://react.dev/learn/writing-markup-with-jsx#why-do-multiple-jsx-tags-need-to-be-wrapped]
